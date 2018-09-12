@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thyleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<h1>Welcome to Register page</h1>
+<form th:action="@{/register-process}" th:object="${userForm}" method="post">
+    <label>User name:</label>
+    <input type="text" th:field="*{username}"/>
+    <br/>
+    <label>Full Name:</label>
+    <input type="text" th:field="*{fullname}"/>
+    <br/>
+    <label>Password:</label>
+    <input type="text" th:field="*{password}"/>
+    <br/>
+    <input type="submit" value="Register"/>
+</form>
+</body>
+</html>

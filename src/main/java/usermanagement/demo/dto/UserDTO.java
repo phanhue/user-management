@@ -1,8 +1,26 @@
 package usermanagement.demo.dto;
 
 public class UserDTO {
+    private Long id;
     private String username;
+    private String fullname;
     private  String password;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
 
     public String getUsername() {
         return username;
@@ -23,7 +41,8 @@ public class UserDTO {
     @Override
     public String toString() {
         return "UserDTO{" +
-                "username='" + username + '\'' +
+                ", username='" + username + '\'' +
+                ", fullname='" + fullname + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
